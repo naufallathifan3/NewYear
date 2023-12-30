@@ -1,0 +1,89 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+body, .glass::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url(image.jpg) 0 / cover fixed;
+    color: white;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-size: 2rem;
+}
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.glass {
+    position: relative;
+    width: 8.5em;
+    background: #ffffff1a;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 5px 3px 10px #00000040;
+    padding: 1.5em 0;
+}
+.glass::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    inset: 0;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25em;
+}
+.value {
+    font-size: 2em;
+}
+.caption {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.showflake {
+    position: absolute;
+    color: #fff;
+    top:-5vh;
+    animation: fall 3s linear;
+    -webkit-animation: fall 3s linear;
+}
+@keyframes fall {
+    from {
+        transform: translateY(0vh);
+        -webkit-transform: translateY(0vh);
+        -moz-transform: translateY(0vh);
+        -ms-transform: translateY(0vh);
+        -o-transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(101vh);
+        -webkit-transform: translateY(101vh);
+        -moz-transform: translateY(101vh);
+        -ms-transform: translateY(101vh);
+        -o-transform: translateY(101vh);
+}
+}
